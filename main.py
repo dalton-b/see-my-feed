@@ -29,16 +29,23 @@ def create_list():
     headers['name'] = 'test_01'
     headers['mode'] = 'private'
     resp = requests.post(url, headers=headers)
-    hi = 0
-
-
 
     return 'list_id'
 
 
 user_ids = get_user_ids(user)
+
+# Authenticate user
+# https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens
+
+
+# Create list
+# https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-create
 create_list()
 
-# POST https://api.twitter.com/1.1/lists/create.json?name=Goonies&mode=public&description=For%20life
+# Add to list
+# 100 per API call
+# https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-create_all
+
 
 hi = 0
